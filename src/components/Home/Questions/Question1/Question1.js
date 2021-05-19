@@ -1,6 +1,7 @@
 import React from 'react';
-import img from '../../../images/undraw_Progress_indicator_re_4o4n.svg';
-import './Questions.css';
+import img from '../../../../images/undraw_Progress_indicator_re_4o4n.svg';
+import '../Questions.css';
+import './question1.css';
 
 const Question1 = () => {
     return (

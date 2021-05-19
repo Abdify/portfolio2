@@ -1,0 +1,62 @@
+.flow{
+    height: 1200px;
+    width: 100%;
+    background-color: lavenderblush;
+
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flow::before, .flow::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 500px;
+    background: white;
+    border: none;
+}
+.flow::before{
+    left: 0;
+    clip-path: ellipse(28.9% 70% at 0% 0%);
+}
+.flow::after{
+    right: 0;
+    clip-path: ellipse(28.9% 70% at 100% 0);
+}
+.stand{
+    height: 100px;
+    width: 40px;
+    background-color: white;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-20px);
+}
+
+.question2{
+    background: linear-gradient(145deg, #ffffff, #e6d8dd);
+    box-shadow:  20px 20px 60px #d9ccd0,
+                -20px -20px 60px #ffffff;
+}
+/* .question2:hover{
+    margin-top: 100px;
+    box-shadow:  20px 20px 60px #d9ccd0,
+                -20px -20px 60px #ffffff;
+} */
+.question2::before, .question2::after {
+    background: lavenderblush;
+}
+.question2::before{
+    content: "How Did Yo";
+    left: 0;
+    text-align: right;
+}
+.question2::after {
+    content: "u Do All Those?";
+    right: 0;
+    text-align: left;
+}

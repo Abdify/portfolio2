@@ -23,8 +23,9 @@ const Projects = () => {
                 PT
             </div>
             <div className="project"></div>
-            <div className="project"></div>
-            <div className="project"></div>
+            <div className="project-end"></div>
+            <div className="project-end"></div>
+            
         </div>
     );
 };

@@ -1,38 +1,10 @@
-.projects{
+.projects {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     position: relative;
 }
-.project{
-    width: 300px;
-    height: 400px;
-    margin: 10px;
-    background-color: lavenderblush;
-    border-radius: 20px;
-transform:
-    perspective(800px)
-    rotateY(25deg) scale(0.9)
-    rotateX(10deg);
-  filter: blur(2px);
-  opacity: 0.5;
-  transition: 0.6s ease all;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.project:hover{
-    transform:
-      perspective(800px)
-      rotateY(-15deg)
-      translateY(-50px)
-      rotateX(10deg)
-      scale(1);
-    filter: blur(0);
-    opacity: 1;
-}
-.projects:before{
+.projects:before {
     content: "";
     position: absolute;
     top: 0;
@@ -43,4 +15,33 @@ transform:
     border: none;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0%, 100% 55%, 50% 100%, 0% 55%);
+}
+
+.project {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    background-color: lavenderblush;
+    border-radius: 20px;
+    transform: perspective(800px) rotateY(25deg) scale(0.9) rotateX(10deg);
+    filter: blur(2px);
+    opacity: 0.5;
+    transition: 0.6s ease all;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project:hover {
+    transform: rotateY(-15deg) translateY(-50px) rotateX(10deg) scale(1);
+    filter: blur(0);
+    opacity: 1;
+}
+
+.project-end {
+    width: 300px;
+    height: 150px;
+    background-color: lavenderblush;
+    margin: 0 20px;
+    border-radius: 20px 20px 0 0;
 }
