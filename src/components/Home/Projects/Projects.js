@@ -1,6 +1,6 @@
 import React from 'react';
 import './Projects.css';
-const Projects = ({scrollNumber}) => {
+const Projects = () => {
 
     const handleScroll = e => {
     let element = e.target
@@ -10,7 +10,7 @@ const Projects = ({scrollNumber}) => {
   }
 
     return (
-        scrollNumber >= 4 ? <div className="projects" onScroll={handleScroll}>
+        <div className="projects" onScroll={handleScroll}>
             <div className="project"></div>
             <div className="project"></div>
             <div className="project"></div>
@@ -26,8 +26,6 @@ const Projects = ({scrollNumber}) => {
             <div className="project"></div>
             <div className="project"></div>
         </div>
-        :
-        <div></div>
     );
 };
 

@@ -7,7 +7,7 @@ const Header = () => {
             
             <div className="wall">
                 <h2 className="title-text">
-                    Hello,<br/> I make Websites
+                    Hello,<br/> I Build <del>Websites</del> <br/>IDEAS
                 </h2>
             </div>
         </div>
