@@ -6,9 +6,9 @@ const Header = () => {
         <div className="header">
             
             <div className="wall">
-                <h2 className="title-text">
+                <p className="title-text">
                     Hello,<br/> I Build <del>Websites</del> <br/>IDEAS
-                </h2>
+                </p>
             </div>
         </div>
     );
