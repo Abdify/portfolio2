@@ -1,0 +1,56 @@
+.questions{
+    height: 400px;
+    width: 50%;
+    transform:
+        perspective(1000px)
+        rotateX(4deg)
+        rotateY(-16deg)
+        rotateZ(4deg);
+    
+    border-radius: 2px;
+    border-radius: 50px;
+    box-shadow:  20px 20px 60px #b98c1b,
+    -20px -20px 60px #fbbe25;
+
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    transition: 1.5s all;
+}
+.questions::before, .questions::after{
+    font-size: 2rem;
+    text-align: right;
+    line-height: 350px;
+    
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #daa520;
+    border-radius: 50px;
+    transition: 1s all;
+}
+.question1::before{
+    content: "How Do You Appro";
+}
+.question1::after{
+    content: "ach A Tough Task?";
+    text-align: left;
+    right: 0;
+    
+}
+.questions:hover{
+    transform: translate(0);
+}
+.questions:hover::before{
+    position: absolute;
+    transform: translate(-200px, -700px) rotateZ(30deg);
+    opacity: 0.2;
+}
+.questions:hover::after{
+    position: absolute;
+    transform: translate(00px, 700px) rotateZ(30deg);
+    opacity: 0.2;
+}
