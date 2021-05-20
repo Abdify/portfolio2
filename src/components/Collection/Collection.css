@@ -7,27 +7,28 @@
     background-color: #e6e6fa;
 }
 .collection-item {
-    height: 400px;
-    width: 30%;
+    height: 500px;
+    width: 350px;
     margin: 0 auto;
+    position: relative;
 
-    /* border-radius: 50px; */
+    /* border: 2px solid; */
+    /* box-shadow: 20px 20px 60px #c4c4d5, -20px -20px 60px #ffffff; */
     background: #b6b6c7;
-    box-shadow: 20px 20px 60px #c4c4d5, -20px -20px 60px #ffffff;
 
     transform:
     scale(0.75)
     rotateY(-30deg)
     rotateX(45deg)
     translateZ(4.5rem);
-  transform-origin: 50% 100%;
+  /* transform-origin: 50% 100%; */
   transform-style: preserve-3d;
   box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.25);
-  transition: 0.5s ease transform;
+  transition: 0.8s ease all;
 
 }
 .collection-item:hover{
-    transform: scale(1);
+    transform: scale(1) translate(0) rotate(0);
 }
 
 .collection-item::before, .collection-item::after{
@@ -36,20 +37,22 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 400px;
-    transition: 2s all;
+    height: 100%;
 }
 
 .collection-item::before{
     border: 5px solid;
     transform: translateZ(4rem);
+    transition: 1.3s ease-out all;
 }
 .collection-item:hover::before{
     transform: translateZ(0);
+    border: 0px solid;
 }
 .collection-item::after{
-    background: yellow;
+    background: darkgray;
     transform: translateZ(-4rem);
+    transition: 2s ease-out all;
 }
 .collection-item:hover::after{
     transform: translateZ(-1px);
@@ -59,4 +62,33 @@
 .collection h4{
     width: 100%;
     text-align: center;
+}
+.collection-item img{
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.item{
+    height: 500px;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.829);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateZ(4rem);
+    transition: 1s all;
+}
+.collection-item:hover .item{
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0);
 }
