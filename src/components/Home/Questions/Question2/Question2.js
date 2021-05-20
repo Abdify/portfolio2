@@ -11,9 +11,9 @@ const Question2 = () => {
                 <div>
                     <h2>By my KEYBOARD!</h2>
                     <ul>
-                        <li>One bowl magical MERN!</li>
+                        <li>One bowl of magical MERN!</li>
                         <li>A drop of creativity</li>
-                        <li>With all the passion I have</li>
+                        <li>All the passions I have</li>
                     </ul>
                 </div>
 
