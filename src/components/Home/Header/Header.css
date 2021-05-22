@@ -1,5 +1,121 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 .title-text .text-focus-in{
     position: absolute;
     bottom: 0%;
-    left: 10%;
+    left: 0%;
 }
+
+.wall {
+    height: 400px;
+    width: 700px;
+    background-image: url(../../../images/chrome-mac-light.png);
+    background-size: 100% 100%;
+    background-position: center;
+
+    transform: rotateX(51deg) rotateZ(43deg);
+    transform-style: preserve-3d;
+    border-radius: 32px;
+    box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        28px 28px 28px 0 rgba(34, 33, 81, 0.25);
+    transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
+
+    
+}
+
+.wall:hover {
+    transform: translate3d(0px, -16px, 0px) rotateX(51deg) rotateZ(43deg);
+    box-shadow: 1px 1px 0 1px #f9f9fb, -1px 0 28px 0 rgba(34, 33, 81, 0.01),
+        54px 54px 28px -10px rgba(34, 33, 81, 0.15);
+}
+
+
+
+.skill-cloud{
+  height: 100%;
+  width: 400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.5s all;
+  background: radial-gradient( #00000021 20%,#fff3 70%, #ffffff38 10%);
+  background-image: radial-gradient( #0000003b 20%,#fff0 60%);
+}
+.skill-cloud:hover{
+  /* transform: scale(1.1); */
+}
+
+ul.cloud {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  line-height: 2.75rem;
+}
+
+ul.cloud a {
+  --size: 4;
+  --color: #a33;
+  color: var(--color);
+  font-size: calc(var(--size) * 0.25rem + 0.5rem);
+  display: block;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  /* opacity: calc((15 - (9 - var(--size))) / 15);  */
+  text-shadow: 10px 20px 30px black;
+ 
+
+}
+
+
+
+ul.cloud li:nth-child(2n+1) a { 
+  --color: rgb(224, 95, 21);
+  transform: rotateX(-10deg) rotateZ(-30deg);
+}
+ul.cloud li:nth-child(3n+1) a { 
+  --color: rgb(35, 35, 126);
+  transform: rotateX(-20deg) rotateZ(-10deg);
+ }
+ul.cloud li:nth-child(4n+1) a { 
+  --color: rgb(51, 204, 115);
+  transform: rotateX(-30deg) rotateZ(-10deg);
+}
+
+ul.cloud a:focus {
+  outline: 1px dashed;
+}
+
+ul.cloud a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 100%;
+  background: var(--color);
+  transform: translate(-50%, 0);
+  opacity: 0.15;
+  transition: width 0.25s;
+}
+
+ul.cloud a:focus::before,
+ul.cloud a:hover::before {
+  width: 100%;
+}
+
+@media (prefers-reduced-motion) {
+  ul.cloud * {
+    transition: none !important;
+  }
+}
+
