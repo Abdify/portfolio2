@@ -26,6 +26,8 @@
   box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.25);
   transition: 0.8s ease all;
 
+  display: flex;
+  align-items: center;
 }
 .collection-item:hover{
     transform: scale(1) translate(0) rotate(0);
@@ -58,15 +60,11 @@
     transform: translateZ(-1px);
 }
 
-
-.collection h4{
-    width: 100%;
-    text-align: center;
-}
 .collection-item img{
-    height: 500px;
+    /* height: 500px; */
+    max-height: 100%;
     width: 100%;
-    position: absolute;
+    
     border-radius: 10px;
     z-index: -1;
 }
@@ -74,7 +72,7 @@
 .item{
     height: 500px;
     width: 100%;
-    background: rgba(0, 0, 0, 0.829);
+    background: rgba(0, 0, 0, 0.7);
 
     display: flex;
     flex-direction: column;
@@ -86,6 +84,10 @@
     filter: blur(10px);
     transform: translateZ(4rem);
     transition: 1s all;
+
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 .collection-item:hover .item{
     opacity: 1;

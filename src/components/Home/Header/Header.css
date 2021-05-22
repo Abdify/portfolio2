@@ -24,6 +24,9 @@
         28px 28px 28px 0 rgba(34, 33, 81, 0.25);
     transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     
 }
 
@@ -37,19 +40,16 @@
 
 .skill-cloud{
   height: 100%;
-  width: 400px;
-  margin: 0 auto;
+  width: 350px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   transition: 0.5s all;
-  background: radial-gradient( #00000021 20%,#fff3 70%, #ffffff38 10%);
-  background-image: radial-gradient( #0000003b 20%,#fff0 60%);
+  /* background: radial-gradient( #00000021 20%,#fff3 70%, #ffffff38 10%); */
+  background-image: radial-gradient( #00000008 30%,#ffffff03 50%, #00000003 100%);
 }
-.skill-cloud:hover{
-  /* transform: scale(1.1); */
-}
+
 
 ul.cloud {
   list-style: none;
@@ -58,7 +58,7 @@ ul.cloud {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  line-height: 2.75rem;
+  /* line-height: 1rem; */
 }
 
 ul.cloud a {
@@ -66,8 +66,9 @@ ul.cloud a {
   --color: #a33;
   color: var(--color);
   font-size: calc(var(--size) * 0.25rem + 0.5rem);
+  font-family: monospace;
   display: block;
-  padding: 1rem;
+  padding: 0.25rem 0.5rem;
   position: relative;
   text-decoration: none;
   /* opacity: calc((15 - (9 - var(--size))) / 15);  */
@@ -79,15 +80,15 @@ ul.cloud a {
 
 
 ul.cloud li:nth-child(2n+1) a { 
-  --color: rgb(224, 95, 21);
+  --color: goldenrod;
   transform: rotateX(-10deg) rotateZ(-30deg);
 }
 ul.cloud li:nth-child(3n+1) a { 
-  --color: rgb(35, 35, 126);
+  --color: cornflowerblue;
   transform: rotateX(-20deg) rotateZ(-10deg);
  }
 ul.cloud li:nth-child(4n+1) a { 
-  --color: rgb(51, 204, 115);
+  --color: green;
   transform: rotateX(-30deg) rotateZ(-10deg);
 }
 

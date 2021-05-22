@@ -1,5 +1,8 @@
 import React from 'react';
+import pbImage from '../../../images/pbImage.png';
+import ptImage from '../../../images/ptImage.png';
 import './Projects.css';
+
 const Projects = () => {
 
     const handleScroll = e => {
@@ -11,21 +14,30 @@ const Projects = () => {
 
     return (
         <div className="projects" onScroll={handleScroll}>
-            <div className="project"></div>
-            <div className="project"></div>
-            <div className="project"></div>
-            <div className="project"></div>
+            <h3 className="head-text"> Some Of My Efforts</h3>
+            <div className="project">
+                <img src={pbImage} alt="" className="project-img" />
+                <div className="project-description">
+                    <button className="btn-brand">View</button>
+                    <h3>Programming Babocched</h3>
+                    <p>A Q/A website for programmers</p>
+                </div>
+            </div>
             <div className="project"></div>
             <div className="project">
-                PB
+                <img src={ptImage} alt="" />
+                <div className="project-description">
+                    <button className="btn-brand">View</button>
+                    <h3>Pro Tutors</h3>
+                    <p>An Online Tutoring System</p>
+                </div>
             </div>
-            <div className="project">
-                PT
-            </div>
+            <div className="project"></div>
+            <div className="project"></div>
+
             <div className="project"></div>
             <div className="project-end"></div>
             <div className="project-end"></div>
-            
         </div>
     );
 };
