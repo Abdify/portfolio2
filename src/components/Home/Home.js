@@ -1,12 +1,12 @@
 import React from "react";
-import Collection from "../Collection/Collection";
 import Parallax from "../Utilities/Parallax/Parallax";
 import ParallaxLayer from "../Utilities/Parallax/ParallaxLayer";
+import Collection from "./Collection/Collection";
 import Header from "./Header/Header";
 import "./Home.css";
 import Projects from "./Projects/Projects";
 import Question1 from "./Questions/Question1/Question1";
-import Question2 from "./Questions/Question2/Question2";
+import Questions from "./Questions/Questions";
 
 const Home = () => {
     return (
@@ -24,7 +24,8 @@ const Home = () => {
             </Parallax>
             
             <Projects />
-            <Question2 />
+            <Questions />
+            
         </>
     );
 };

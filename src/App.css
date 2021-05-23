@@ -56,6 +56,7 @@
   background-position: 100%;
   background-size: 400%;
 
+  cursor: pointer;
   transition: 0.8s all cubic-bezier(0.280, 0.840, 0.420, 1);
   z-index: 1;
 }

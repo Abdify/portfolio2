@@ -4,9 +4,6 @@ import "./Question2.css";
 
 const Question2 = () => {
     return (
-        <div className="flow">
-            <div className="stand"></div>
-
             <div className="questions question2">
                 <div>
                     <h2>By my KEYBOARD!</h2>
@@ -19,7 +16,6 @@ const Question2 = () => {
 
                 <img src={image} alt="" />
             </div>
-        </div>
     );
 };
 

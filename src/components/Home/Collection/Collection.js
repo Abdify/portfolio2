@@ -1,7 +1,7 @@
 import React from 'react';
-import loginImage from '../../images/Capture.PNG';
-import filterImage from '../../images/collection-filter.PNG';
-import searchImage from '../../images/collection-serach.PNG';
+import loginImage from '../../../images/Capture.PNG';
+import filterImage from '../../../images/collection-filter.PNG';
+import searchImage from '../../../images/collection-serach.PNG';
 import './Collection.css';
 
 const Collection = () => {

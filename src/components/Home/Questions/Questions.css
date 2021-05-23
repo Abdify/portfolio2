@@ -32,16 +32,88 @@
 }
 .questions:hover::before {
     position: absolute;
-    transform: translate(-200px, -700px) rotateZ(30deg);
-    opacity: 0.2;
+    transform: translate(-300px, -200px) rotateZ(30deg);
+    opacity: 0;
 }
 .questions:hover::after {
     position: absolute;
-    transform: translate(0px, 700px) rotateZ(30deg);
-    opacity: 0.2;
+    transform: translate(700px, 0px) rotateZ(30deg);
+    opacity: 0;
+    /* animation: slide-out 1s both; */
 }
 
+@keyframes slide-out {
+    0%{
+        transform: translate(0px, 0px) rotateZ(30deg);
+        opacity: 1;
+        
+    }
+
+    100%{
+        transform: translate(300px, 0px) rotateZ(30deg);
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes slide-in {
+    0%{
+        transform: translate(300px, 0px) rotateZ(30deg);
+        opacity: 0;
+        
+    }
+
+    100%{
+        transform: translate(00px, 0px) rotateZ(30deg);
+        opacity: 1;
+    }
+}
 .questions img {
     max-width: 300px;
     margin-left: 1rem;
+}
+
+
+
+.flow{
+    height: 1500px;
+    width: 100%;
+    background-color: lavenderblush;
+
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flow::before, .flow::after {
+    content: "";
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 500px;
+    background: white;
+    border: none;
+}
+.flow::before{
+    left: 0;
+    clip-path: ellipse(28.9% 70% at 0% 0%);
+}
+.flow::after{
+    right: 0;
+    clip-path: ellipse(28.9% 70% at 100% 0);
+}
+.stand{
+    height: 100px;
+    width: 40px;
+    background-color: white;
+    border-radius: 0 0 50% 50%;
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translateX(-20px);
+}
+
+.flow .question2{
+    margin-top: 500px;
 }
